@@ -1,0 +1,13 @@
+plugins {
+    id 'java'
+}
+
+dependencies {
+    api(project(":spring-context"))
+    api(project(":spring-beans"))
+    api(project(":spring-core"))
+    api(project(":spring-aop"))
+    api(project(":spring-instrument"))
+    testImplementation platform('org.junit:junit-bom:5.10.0')
+    testImplementation 'org.junit.jupiter:junit-jupiter'
+}
