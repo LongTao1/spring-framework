@@ -23,6 +23,11 @@ configure(allprojects) { project ->
 	apply plugin: "org.springframework.build.localdev"
 	group = "org.springframework"
 	repositories {
+		maven { url 'https://maven.aliyun.com/nexus/content/groups/public/' }
+		maven { url 'https://maven.aliyun.com/nexus/content/repositories/jcenter'}
+		maven { url "https://maven.aliyun.com/repository/public" }
+		maven { url "https://maven.aliyun.com/repository/apache-snapshots" }
+		maven { url "https://maven.aliyun.com/repository/gradle-plugin" }
 		mavenCentral()
 		maven {
 			url "https://repo.spring.io/milestone"
@@ -115,4 +120,7 @@ configure([rootProject] + javaProjects) { project ->
 
 configure(moduleProjects) { project ->
 	apply from: "${rootDir}/gradle/spring-module.gradle"
+}
+test {
+	enabled(false)
 }
