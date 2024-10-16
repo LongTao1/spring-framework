@@ -1,7 +1,3 @@
-plugins {
-    id 'org.springframework.build.runtimehints-agent'
-}
-
 dependencies {
     // https://mvnrepository.com/artifact/cglib/cglib
     implementation 'cglib:cglib:3.3.0'
