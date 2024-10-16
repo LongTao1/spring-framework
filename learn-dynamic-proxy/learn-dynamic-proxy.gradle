@@ -1,11 +1,11 @@
 plugins {
-    id 'java'
+    id 'org.springframework.build.runtimehints-agent'
 }
 
 dependencies {
     // https://mvnrepository.com/artifact/cglib/cglib
     implementation 'cglib:cglib:3.3.0'
-
+    implementation(project(":spring-core"))
     testImplementation platform('org.junit:junit-bom:5.10.0')
     testImplementation 'org.junit.jupiter:junit-jupiter'
 }

@@ -1,6 +1,9 @@
 package com.learn;
 
 import com.learn.cglib.DogService;
+import net.sf.cglib.proxy.Enhancer;
+import net.sf.cglib.proxy.MethodInterceptor;
+import net.sf.cglib.proxy.MethodProxy;
 
 import java.lang.reflect.Method;
 
